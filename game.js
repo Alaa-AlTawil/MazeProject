@@ -9,6 +9,14 @@ function play() {
     start.addEventListener("click", startPlaying);
 
 }
+function startPlaying() {
+    myDiv.addEventListener("mouseleave", cheating);
+    game.querySelectorAll('.boundary').forEach(item => {
+        item.addEventListener('mousemove', boundaryLoser)
+    });
+    const end = document.getElementById("end");
+    end.addEventListener("mousemove", winner);
 
+}
 
 }

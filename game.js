@@ -11,7 +11,7 @@ function play() {
 }
 
 function startPlaying() {
-    
+
     myDiv.addEventListener("mouseleave", cheating);
 
     game.querySelectorAll('.youlose').forEach(item => {
@@ -54,5 +54,22 @@ function winner() {
     myDiv.removeEventListener("mouseleave", cheating);
     s += 5;
     document.getElementById("status").textContent = "winner your score is " + s;
+}
+
+function cheating() {
+    s = 0;
+
+
+    document.getElementById("status").textContent = "loser " + s;
+
+    game.querySelectorAll('.boundary').forEach(item => {
+        item.classList.add("youlose");
+    });
+    game.querySelectorAll('.boundary').forEach(item => {
+        item.removeEventListener('mousemove', boundaryLoser)
+    });
+    myDiv.removeEventListener("mouseleave", cheating);
+    end.removeEventListener("mousemove", winner);
+    alert("cheeeaaaating!!!!\nyour score is " + s);
 }
 }

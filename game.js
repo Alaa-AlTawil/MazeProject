@@ -12,6 +12,15 @@ function play() {
 
 function startPlaying() {
     
+    myDiv.addEventListener("mouseleave", cheating);
+
+    game.querySelectorAll('.youlose').forEach(item => {
+        item.classList.add("boundary")
+    });
+    game.querySelectorAll('.boundary').forEach(item => {
+        item.classList.remove("youlose")
+    });
+
     game.querySelectorAll('.boundary').forEach(item => {
         item.addEventListener('mousemove', boundaryLoser)
     });

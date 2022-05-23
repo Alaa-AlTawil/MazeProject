@@ -110,3 +110,33 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	height: 150px;
 	width: 98px;
 }
+.newdiv{
+	display:flex;
+	text-align: center;
+	height: 50px;
+	padding-top: 30px;
+}
+.live{
+	flex:1;
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.last{
+	flex:1;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+
+}
+.best{
+	flex:1;
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.value{
+	font-size: 20px;
+}

@@ -73,12 +73,9 @@ function winner() {
         min=tlive;
         value3.innerText=tlive+"sec";
     }
-    if(!flag){
-        value2.innerText=0;
-        flag=true;}
-    else{
-        value2.innerText=tlast+"sec"
-    }
+   
+    value2.innerText=tlast+"sec"
+    
 
 }
 
